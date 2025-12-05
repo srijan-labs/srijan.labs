@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Srijan Labs | Home</title>
+    <!-- Load Tailwind CSS from CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configure Tailwind to use Inter font -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        },
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Small CSS addition for smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800 bg-white">
+
+    <!-- Header & Navigation -->
+    <!-- COMPLETELY NEW HEADER DESIGN: Based on user-provided image. Solid dark blue background, white/light links, no button. -->
+    <header id="main-header" class="bg-brand-800 sticky top-0 z-50 shadow-md">
+        <!-- Increased vertical padding -->
+        <nav class="container mx-auto px-6 py-5 flex justify-between items-center">
+            
+            <!-- 1. Project Logo/Name (Changed to white, size reduced) -->
+            <a href="#home" class="text-xl font-bold text-white">
+                Srijan Labs
+            </a>
+            
+            <!-- 2. Desktop Navigation (Right-aligned, new colors, increased spacing, simplified text) -->
+            <div class="hidden md:flex items-center space-x-10">
+                <a href="#home" class="text-brand-200 hover:text-white font-semibold transition-colors duration-200">Home</a>
+                <a href="#challenge" class="text-brand-200 hover:text-white font-semibold transition-colors duration-200">Challenge</a>
+                <a href="#model" class="text-brand-200 hover:text-white font-semibold transition-colors duration-200">Model</a>
+                
+                <!-- Removed Community Link -->
+                
+                <!-- 3. Get Involved Button (NOW A LINK, no button, simplified text) -->
+                <a href="#contact" class="text-brand-200 hover:text-white font-semibold transition-colors duration-200">
+                    Contact
+                </a>
+            </div>
+            
+            <!-- Mobile Menu Button (Changed to white) -->
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-brand-200 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-800 shadow-lg pb-3 border-t border-brand-700">
+            <a href="#home" class="block px-8 py-3 text-brand-200 hover:bg-brand-700 font-medium">Home</a>
+            <a href="#challenge" class="block px-8 py-3 text-brand-200 hover:bg-brand-700 font-medium">Challenge</a>
+            <a href="#model" class="block px-8 py-3 text-brand-200 hover:bg-brand-700 font-medium">Model</a>
+            <!-- Removed Community Link -->
+            <a href="#contact" class="block px-8 py-3 text-brand-200 hover:bg-brand-700 font-medium">Contact</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Hero Section -->
+        <!-- Removed extra top padding, header is no longer overlapping -->
+        <section id="home" class="bg-brand-50 pt-20 pb-28">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-6xl font-bold text-brand-800 mb-6 leading-tight">
+                    Nurturing Tomorrow's Leaders, Together.
+                </h1>
+                <p class="text-lg md:text-xl text-brand-700 max-w-3xl mx-auto mb-10">
+                    An immersive learning space that nurtures awareness, agency, and collaborative leadership.
+                </p>
+                <a href="#model" class="bg-brand-600 text-white px-8 py-3 rounded-full text-lg font-medium hover:bg-brand-700 transition duration-300 shadow-lg">
+                    Discover Our Model
+                </a>
+            </div>
+        </section>
+
+        <!-- The Challenge Section (Moved Up) -->
+        <section id="challenge" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto">
+                    <span class="text-brand-600 font-semibold uppercase">The Challenge We Address</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-3 mb-6">Education for a New Reality</h2>
+                    <p class="text-lg md:text-xl text-gray-600 mb-6">
+                        In a world transformed by AI, uncertainty, and rapid social change, young people need more than academic skills.
+                    </p>
+                    <p class="text-lg md:text-xl text-gray-600">
+                        They need the human capacities to see clearly, act with courage, collaborate with purpose, and design solutions for real problems, while continuously learning and adapting. Our model develops exactly these capacities.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Solution (Transition Section) -->
+        <section class="py-16 bg-brand-50">
+            <div class="container mx-auto px-6 text-center max-w-3xl">
+                <h2 class="text-3xl font-bold text-brand-800 mb-4">Our Answer: A Framework for Human-Centric Learning</h2>
+                <p class="text-lg text-gray-700">
+                    To meet this challenge, we developed the SALD Model. It’s our proprietary, field-tested framework designed to build these essential human capacities from the inside out. It's not just a curriculum; it's an experiential journey.
+                </p>
+            </div>
+        </section>
+
+
+        <!-- Our Model Section -->
+        <section id="model" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">The SALD Model (See, Act, Lead, Design)</h2>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">Our proprietary framework develops human capacities through hands-on, community-rooted experiences.</p>
+                </div>
+
+                <!-- Stages Grid -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    
+                    <!-- Stage 1: See -->
+                    <div class="bg-white p-8 rounded-lg shadow-lg border-t-4 border-brand-500">
+                        <div class="flex items-center justify-center w-16 h-16 bg-brand-100 text-brand-600 rounded-full mb-6">
+                            <!-- Icon: Eye -->
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-.07.207-.07.431 0 .638C20.268 16.057 16.478 19 12 19c-4.478 0-8.268-2.943-9.542-7a1.007 1.007 0 010-.638z"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-3">1. See</h3>
+                        <p class="font-bold text-brand-700 mb-4">Awareness</p>
+                        <p class="text-gray-600 mb-5">Students learn to see themselves, others, and the world with clarity, building emotional grounding, identity, and empathy.</p>
+                    </div>
+
+                    <!-- Stage 2: Act -->
+                    <div class="bg-white p-8 rounded-lg shadow-lg border-t-4 border-brand-500">
+                        <div class="flex items-center justify-center w-16 h-16 bg-brand-100 text-brand-600 rounded-full mb-6">
+                            <!-- Icon: Lightbulb/Fist -->
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 11.3l3-3m0 0l3 3m-3-3v7m6-4a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-3">2. Act</h3>
+                        <p class="font-bold text-brand-700 mb-4">Agency</p>
+                        <p class="text-gray-600 mb-5">Students internalize the belief: "I have the capacity to act." They learn to take initiative, make decisions, and follow through.</p>
+                    </div>
+
+                    <!-- Stage 3: Lead -->
+                    <div class="bg-white p-8 rounded-lg shadow-lg border-t-4 border-brand-500">
+                        <div class="flex items-center justify-center w-16 h-16 bg-brand-100 text-brand-600 rounded-full mb-6">
+                            <!-- Icon: Users -->
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-1.657-1.343-3-3-3s-3 1.343-3 3v2m6 0H7M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-1.657 1.343-3 3-3s3 1.343 3 3v2m-6 0v-2a3 3 0 00-3-3c-1.657 0-3 1.343-3 3v2m6 0h10M12 15a3 3 0 01-3-3V9a3 3 0 013-3h.01a3 3 0 013 3v3a3 3 0 01-3 3h-.01z"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-3">3. Lead</h3>
+                        <p class="font-bold text-brand-700 mb-4">Leadership</p>
+                        <p class="text-gray-600 mb-5">Students shift from "I can" to "We can." They learn collaboration, negotiation, shared visioning, and trust-building in mixed teams.</p>
+                    </div>
+
+                    <!-- Stage 4: Design -->
+                    <div class="bg-white p-8 rounded-lg shadow-lg border-t-4 border-brand-500">
+                        <div class="flex items-center justify-center w-16 h-16 bg-brand-100 text-brand-600 rounded-full mb-6">
+                            <!-- Icon: Cog/Design -->
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/.svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.096 2.573-1.066z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-3">4. Design</h3>
+                        <p class="font-bold text-brand-700 mb-4">Problem Solving</p>
+                        <p class="text-gray-600 mb-5">Awareness, agency, and leadership converge. Students design and build real-world solutions using Human-Centered Design and new-age tools.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- What Makes Us Unique -->
+        <section id="unique" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">What Makes Our Model Unique</h2>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">Our framework is built on years of school, district, and system-level experience.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <!-- Feature 1: Proprietary Model -->
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0 w-12 h-12 bg-brand-100 text-brand-600 rounded-full flex items-center justify-center">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.012-1.012l-7.126-2.375-2.375-7.126a2 2 0 00-1.012-1.012A2 2 0 006 4v16a2 2 0 001.884 1.987A2 2 0 009.013 20.9l2.375-7.126 7.126-2.375z"></path></svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-2">A Proprietary 4-Stage Model</h3>
+                            <p class="text-gray-600">Our field-tested "See, Act, Lead, Design" framework builds human-centric capacities from the ground up.</p>
+                        </div>
+                    </div>
+                    <!-- Feature 2: Bridging Ecosystems -->
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0 w-12 h-12 bg-brand-100 text-brand-600 rounded-full flex items-center justify-center">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-1.657-1.343-3-3-3s-3 1.343-3 3v2m6 0H7M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-1.657 1.343-3 3-3s3 1.343 3 3v2m-6 0v-2a3 3 0 00-3-3c-1.657 0-3 1.343-3 3v2m6 0h10M12 15a3 3 0 01-3-3V9a3 3 0 013-3h.01a3 3 0 013 3v3a3 3 0 01-3 3h-.01z"></path></svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Bridging Ecosystems</h3>
+                            <p class="text-gray-600">We create unique, shared learning spaces for students across public and private socioeconomic lines.</p>
+                        </div>
+                    </div>
+                    <!-- Feature 3: Immersive Learning -->
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0 w-12 h-12 bg-brand-100 text-brand-600 rounded-full flex items-center justify-center">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Deeply Immersive</h3>
+                            <p class="text-gray-600">Students live leadership—they don't read it in a textbook. Learning happens through field immersions, design labs, and art.</p>
+                        </div>
+                    </div>
+                     <!-- Feature 4: Global Partnership -->
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0 w-12 h-12 bg-brand-100 text-brand-600 rounded-full flex items-center justify-center">
+                            <!-- Globe Icon -->
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h.5A2.5 2.5 0 0021.5 5.5V3.935m-13.483 0A10.001 10.001 0 0012 3c2.761 0 5.261 1.232 7.017 3.203m-14.034 0A10.001 10.001 0 0112 3c-2.761 0-5.261 1.232-7.017 3.203m14.034 0L21 11m-18 0l2.983-4.862M12 21a10.001 10.001 0 01-7.017-3.203m14.034 0A10.001 10.001 0 0012 21z"></path></svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Global Partnership</h3>
+                            <p class="text-gray-600">Our collaboration with FacesUp Uganda brings in SEL-informed, art-based identity work for emotional depth.</p>
+
+                        </div>
+                    </div>
+                    <!-- Feature 5: Integrated Meta-Learning -->
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0 w-12 h-12 bg-brand-100 text-brand-600 rounded-full flex items-center justify-center">
+                            <!-- Brain Icon -->
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13a7 7 0 0114 0v3a1 1 0 01-1 1H6a1 1 0 01-1-1v-3zM5 13H3a2 2 0 01-2-2V8a2 2 0 012-2h2m14 0h2a2 2 0 012 2v3a2 2 0 01-2 2h-2m-7 3v3m0-10V3m0 0a2 2 0 10-4 0v3m4 0a2 2 0 104 0v-3"></path></svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Integrated Meta-Learning</h3>
+                            <p class="text-gray-600">Not a separate stage, but a mindset embedded in every step, enabling students to become adaptive, lifelong learners.</p>
+                        </div>
+                    </div>
+                    <!-- Empty div for alignment on 2-col layout, or add a 6th item -->
+                    <div class="flex items-start space-x-4"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section (MOVED) -->
+        <section id="about" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto">
+                    <!-- Added "Backed by Teach For India" here -->
+                    <p class="text-brand-600 font-semibold uppercase tracking-wide mb-2">An initiative backed by Teach For India</p>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">From Classroom to Community</h2>
+                    <p class="text-lg text-gray-600 mb-6">
+                        Our journey began as Teach For India Fellows, working in communities marked by socio-economic instability yet filled with raw talent. This experience evolved into system-level work, designing and implementing programs across thousands of schools.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-6">
+                        Through it all, one question persisted: in a world of AI and automation, what is the true purpose of education?
+                    </p>
+                    <p class="text-lg text-gray-700 font-semibold mb-8">
+                        We realized the core of education lies in nurturing **awareness, agency, and meta-learning**. This is transformational leadership—not a title, but an inner shift that enables anyone to lead change. This project is our way to build a community to explore that inner dimension.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Get Involved / Contact Section -->
+        <section id="contact" class="py-24 bg-brand-700 text-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl font-bold mb-6">Get Involved</h2>
+                <p class="text-xl text-brand-100 max-w-2xl mx-auto mb-10">
+                    We are building a community of change-makers. Whether you are a school, a mentor, or a funder, join us in reimagining education for the next generation.
+                </p>
+                <a href="mailto:info@srijanlabs.org" class="bg-white text-brand-700 px-8 py-3 rounded-full text-lg font-medium hover:bg-brand-50 transition duration-300 shadow-lg">
+                    Contact Us
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-400 py-12">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; <span id="year"></span> Srijan Labs. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileLinks = mobileMenu.getElementsByTagName('a');
+        for (let link of mobileLinks) {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        }
+        
+        // Close mobile menu on desktop resize
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 768) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+        
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>
